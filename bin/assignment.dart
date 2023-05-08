@@ -1,10 +1,6 @@
-import 'dart:io';
-
 void main(){
-  print("Enter student name:");
-  String ? studentName = stdin.readLineSync();
-  print("Enter Test Score:");
-  int? testScore = int.parse(stdin.readLineSync()!);
+  String studentName = "SM Fahad Bin Mahbub Zeem";
+  int testScore = 85;
 
   String studentGrade(String name, int testScore) {
     if (testScore < 0 || testScore > 100) {
@@ -21,6 +17,6 @@ void main(){
       return "F";
     }
   }
-  String grade = studentGrade(studentName!, testScore);
+  String grade = studentGrade(studentName, testScore);
   print("$studentName's grade is: $grade");
 }
